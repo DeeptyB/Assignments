@@ -13,10 +13,11 @@ public class Solution29to40 {
         //obj.solution32();
         //obj.solution33();
         //obj.solution34();
+        obj.solution35();
         //obj.solution37();
         //obj.solution38();
         //obj.solution39();//Need to work on
-        obj.solution40();
+        //obj.solution40();
 
 
     }
@@ -126,6 +127,26 @@ public class Solution29to40 {
                 System.out.print(a[i] + " ");
             }
         }
+            public void solution35() {
+                int[] array = new int[10];
+                for (int i = 0; i < array.length; i++) {
+                    array[i] = Integer.parseInt(JOptionPane.showInputDialog("Enter the elements"));
+
+                }
+
+                int temp = 0;
+                for (int i = 0; i < array.length; i++) {
+                    for (int j = 0; j < array.length; j++) {
+                        if (array[i] > array[j]) {
+                            temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
+                        }
+                    }
+
+                }
+                System.out.println("The second largest number is " +array[1]);
+            }
 
             public void solution37(){
             int [][] a = {{1,2,3},{4,5,6},{7,8,9}};
