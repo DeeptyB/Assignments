@@ -6,8 +6,15 @@ public class BankAccount {
     int accountNumber = 0;
     String name;
     double balance = 0;
+
+    public BankAccount (double initialBalance, int  accNumber){
+        balance = initialBalance;
+        accountNumber = accNumber;
+
+
+    }
     public static void main(String[] args) {
-        BankAccount account = new BankAccount();
+        BankAccount account = new BankAccount(5000, 10000001);
         int choice = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number of your option:\n" +
                 "1.To open account\n" + "2. To withdraw money\n" + "3.To deposit money\n" + "4.To display the information" ));
 
